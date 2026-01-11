@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Speakeeee – Speak Better English</title>
+
+
+  <!-- Correct way to load CSS in Flask -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="container">
+   <<h1>🎤 Speakeeee</h1>
+<p class="subtitle">Speak. Improve. Sound better.</p>
+
+
+<button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+<div class="button-row">
+  <button id="speakBtn" onclick="startSpeech()">🎤 Start Speaking</button>
+  <button id="stopBtn" onclick="stopSpeech()" disabled>⛔ Stop</button>
+</div>
+
+<div id="status" class="status-text">Idle</div>
+
+
+
+    <div class="section">
+      <div class="label">Your Speech</div>
+      <div id="output" class="output-box">---</div>
+    </div>
+
+    <div class="section">
+      <div class="label">Corrected English</div>
+      <div id="corrected" class="output-box">---</div>
+    </div>
+
+    <div class="footer">
+     Speakeeee • Voice-Powered English Assistant
+
+    </div>
+  </div>
+
+  <!-- Correct way to load JS in Flask -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+
+
